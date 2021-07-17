@@ -28,12 +28,45 @@ nodeA1 = {'name':'nodeA1','targetdir':[],'distance':0,'passed':False,'latlong':[
 nodeB1 = {'name':'nodeB1','targetdir':[],'distance':0,'passed':False,'latlong':[-4.0406004774682,1.566404499553]}
 nodeC1 = {'name':'nodeC1','targetdir':[],'distance':0,'passed':False,'latlong':[-7.2270111102847,4.2873843657783]}
 
+nodepathlist = []
 
 nodeA.update({'openmove':[nodeB]})
+nodepathAB = {'name':'AB', 'traffic':0, 'path_distance':0}
+nodepathlist.append(nodepathAB)
+
 nodeB.update({'openmove':[nodeA, nodeC]})
+nodepathBA = {'name':'BA', 'traffic':0, 'path_distance':0}
+nodepathBC = {'name':'BC', 'traffic':0, 'path_distance':0}
+nodepathlist.append(nodepathBA)
+nodepathlist.append(nodepathBC)
+
 nodeC.update({'openmove':[nodeB, nodeD, nodeV]})
+nodepathCB = {'name':'CB', 'traffic':0, 'path_distance':0}
+nodepathCD = {'name':'CD', 'traffic':0, 'path_distance':0}
+nodepathCV = {'name':'CV', 'traffic':0, 'path_distance':0}
+nodepathlist.append(nodepathCB)
+nodepathlist.append(nodepathCD)
+nodepathlist.append(nodepathCV)
+
 nodeD.update({'openmove':[nodeC, nodeE, nodeP]})
+nodepathDC = {'name':'DC', 'traffic':0, 'path_distance':0}
+nodepathDE = {'name':'DE', 'traffic':0, 'path_distance':0}
+nodepathDP = {'name':'DP', 'traffic':0, 'path_distance':0}
+nodepathlist.append(nodepathDC)
+nodepathlist.append(nodepathDE)
+nodepathlist.append(nodepathDP)
+
 nodeE.update({'openmove':[nodeD, nodeF, nodeP]})
+nodepathED = {'name':'DC', 'traffic':0, 'path_distance':0}
+nodepathEF = {'name':'DE', 'traffic':0, 'path_distance':0}
+nodepathEP = {'name':'DP', 'traffic':0, 'path_distance':0}
+nodepathlist.append(nodepathDC)
+nodepathlist.append(nodepathDE)
+nodepathlist.append(nodepathDP)
+
+
+
+
 nodeF.update({'openmove':[nodeE, nodeS]})
 nodeG.update({'openmove':[nodeH, nodeS, nodeB1]})
 nodeH.update({'openmove':[nodeG, nodeA1]})
@@ -56,6 +89,8 @@ nodeZ.update({'openmove':[nodeN, nodeO]})
 nodeA1.update({'openmove':[nodeH, nodeI]})
 nodeB1.update({'openmove':[nodeG, nodeL]})
 nodeC1.update({'openmove':[nodeL, nodeU]})
+
+
 
 #y
 playerlat = 9.8149154202846
