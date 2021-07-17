@@ -216,9 +216,6 @@ for i in nodelist:
     pathprint = i['openpath']
     print(f"{nameprint}: {pathprint}")
 
-#for i in nodelist:
-#    print(f"{i['name']}: {i['openpath']}")
-
 #y
 playerlat = 9.8149154202846
 #x 
