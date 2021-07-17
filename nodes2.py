@@ -417,7 +417,7 @@ while True:
     #print(f"\nCurrent Node Distance: {currentnode['distance']}")
     if currentnode['passed']==True:
         try:
-            pathlist.pop(currentnode['name'])
+            pathlist.remove(currentnode['name'])
             passedcompute(currentnode)
             stepcount-=1
         except:
@@ -425,7 +425,7 @@ while True:
             stepcount-=1    
 
         try:
-            nodepathlistpassed.pop(currentpath['name'])
+            nodepathlistpassed.remove(currentpath['name'])
             pathpassedcompute(currentpath)
         except:
             None
@@ -456,9 +456,9 @@ while True:
                 
         #currentnode = playerposcheck(playerlat,playerlong)
         if currentpath['passed']==True:
-            pathlist.pop(previousnode['name'])
+            pathlist.remove(previousnode['name'])
             try:
-                nodepathlist.pop[previouspath['name']]
+                nodepathlist.remove[previouspath['name']]
             except:
                 None
             stepcount-=1
