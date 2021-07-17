@@ -211,10 +211,10 @@ for i in nodepathlist:
         templist.append(i)
         i['startnode'].update({'openpath':templist})
 
-for i in nodelist:
-    nameprint = i['name']
-    pathprint = i['openpath']
-    print(f"{nameprint}: {pathprint}")
+#for i in nodelist:
+#    nameprint = i['name']
+#    pathprint = i['openpath']
+#    print(f"{nameprint}: {pathprint}")
 
 #y
 playerlat = 9.8149154202846
