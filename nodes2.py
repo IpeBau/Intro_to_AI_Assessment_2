@@ -12,7 +12,7 @@ nodeH = {'openpath':[],'name':'nodeH','targetdir':[],'distance':0,'passed':False
 nodeI = {'openpath':[],'name':'nodeI','targetdir':[],'distance':0,'passed':False,'latlong':[-12.9553897760223,-5.4866617326364]}
 nodeJ = {'openpath':[],'name':'nodeJ','targetdir':[],'distance':0,'passed':False,'latlong':[-14.9961246756913,-7.8496179322532]}
 nodeK = {'openpath':[],'name':'nodeK','targetdir':[],'distance':0,'passed':False,'latlong':[-13.7788442092221,-9.2101078653659]}
-nodeL = {'openpath':[],'name':'nodeL','targetdir':[],'distance':0,'passed':False,'latlong':[-13.2418087093092,6.0417003321605]}
+nodeL = {'openpath':[],'name':'nodeL','targetdir':[],'distance':0,'passed':False,'latlong':[-3.8615886441639,6.0417003321605]}
 nodeM = {'openpath':[],'name':'nodeM','targetdir':[],'distance':0,'passed':False,'latlong':[-13.2418087093092,1.3873926662487]}
 nodeN = {'openpath':[],'name':'nodeN','targetdir':[],'distance':0,'passed':False,'latlong':[4.3729556878339,9.5861346315856]}
 nodeO = {'openpath':[],'name':'nodeO','targetdir':[],'distance':0,'passed':False,'latlong':[-3.6109720775379,7.7602139318817]}
@@ -50,7 +50,7 @@ nodepathlist.append(nodepathCB)
 nodepathlist.append(nodepathCD)
 nodepathlist.append(nodepathCV)
 
-nodeD.update({'openmove':[nodeC, nodeE, nodeP]})
+nodeD.update({'openmove':[nodeC, nodeE]})
 nodepathDC = {'name':'DC', 'traffic':0, 'path_distance':0, 'startnode':nodeD, 'endnode':nodeC, 'passed':False}
 nodepathDE = {'name':'DE', 'traffic':0, 'path_distance':0, 'startnode':nodeD, 'endnode':nodeE, 'passed':False}
 nodepathlist.append(nodepathDC)
@@ -106,7 +106,7 @@ nodeL.update({'openmove':[nodeO, nodeR, nodeB1, nodeC1]})
 nodepathLO = {'name':'LO', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeO, 'passed':False}
 nodepathLR = {'name':'LR', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeR, 'passed':False}
 nodepathLB1 = {'name':'LB1', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeB1, 'passed':False}
-nodepathLC1 = {'name':'LC1', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeC1, 'passed':False}
+nodepathLC1 = {'name':'LC1', 'traffic':0.5, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeC1, 'passed':False}
 nodepathlist.append(nodepathLO)
 nodepathlist.append(nodepathLR)
 nodepathlist.append(nodepathLB1)
@@ -161,7 +161,7 @@ nodepathlist.append(nodepathTI)
 nodepathlist.append(nodepathTM)
 
 nodeU.update({'openmove':[nodeM, nodeC1]})
-nodepathUM = {'name':'UM', 'traffic':0, 'path_distance':0, 'startnode':nodeU, 'endnode':nodeC1, 'passed':False}
+nodepathUM = {'name':'UM', 'traffic':0, 'path_distance':0, 'startnode':nodeU, 'endnode':nodeM, 'passed':False}
 nodepathUC1 = {'name':'UC1', 'traffic':0, 'path_distance':0, 'startnode':nodeU, 'endnode':nodeC1, 'passed':False}
 nodepathlist.append(nodepathUM)
 nodepathlist.append(nodepathUC1)
@@ -210,6 +210,11 @@ for i in nodepathlist:
         templist.append(i)
         i['startnode'].update({'openpath':templist})
 
+for i in nodelist:
+    namelist = []
+    for x in i['openpath']:
+        namelist.append(x['name'])
+    print(f"{i['name']}: {namelist}")
 
 #y
 playerlat = 9.8149154202846
@@ -296,7 +301,7 @@ for i in nodelist:
 
 
     if exitlat > nodelat and exitlong > nodelong:
-        i.update({'targetdir':['south','east']})
+        i.update({'targetdir':'southwest'})
         i.update({'distance': sum([latdif+southpenalty,longdif+eastpenalty])/len(nodelatlong)})
     elif exitlat > nodelat and exitlong < nodelong:
         i.update({'targetdir':'southwest'})
@@ -329,6 +334,7 @@ for i in nodelist:
 for i in nodepathlist:
     path = i['endnode']['distance'] + i['traffic']*20
     i.update({'path_distance':path})
+    print(f"{i['name']}: {i['path_distance']}")
 
 #def playerposcheck(playerlat, playerlong):
 #    for i in nodepathlist:
@@ -412,61 +418,80 @@ stepcount = 0
 while True:
     currentnode = playerposcheck(playerlat,playerlong,'node')
 
-
     print(f"\nCurrent Node: {currentnode['name']}")
     #print(f"\nCurrent Node Distance: {currentnode['distance']}")
-    if currentnode['passed']==True:
-        try:
-            pathlist.remove(currentnode['name'])
-            passedcompute(currentnode)
-            stepcount-=1
-        except:
-            passedcompute(currentnode)
-            stepcount-=1    
-
-        try:
-            nodepathlistpassed.remove(currentpath['name'])
-            pathpassedcompute(currentpath)
-        except:
-            None
+    #if currentnode['passed']==True:
+    #    try:
+    #        pathlist.remove(currentnode['name'])
+    #        passedcompute(currentnode)
+    #        stepcount-=1
+    #    except:
+    #        passedcompute(currentnode)
+    #        stepcount-=1    
+#
+    #    try:
+    #        nodepathlistpassed.remove(currentpath['name'])
+    #        pathpassedcompute(currentpath)
+    #    except:
+    #        pathpassedcompute(currentpath)
     currentnode.update({'passed':True})
     passedcompute(currentnode)
     pathlist.append(currentnode['name'])
 
-    try:
-        currentpath.update({'passed':True})
-        pathpassedcompute(currentpath)
-        nodepathlistpassed.append(currentpath['name'])
-    except:
-        None
-    stepcount+=1
+    #try:
+    #    currentpath.update({'passed':True})
+    #    pathpassedcompute(currentpath)
+    #    nodepathlistpassed.append(currentpath['name'])
+    #except:
+    #    None
+    #stepcount+=1
     
     if playerlat != exitlat or playerlong != exitlong: 
         
-        previousnode = currentnode
+        
         try:
+            previousnode = currentnode
             previouspath = currentpath
         except:
-            None
+            previousnode = currentnode
+        
         move = availabledirections(currentnode)
         playerlong = move['endnode']['latlong'][1]
         playerlat = move['endnode']['latlong'][0]
         currentpath = move
-        
+        currentnode = move['endnode']
+
+        try:
+            currentpath.update({'passed':True})
+            pathpassedcompute(currentpath)
+            nodepathlistpassed.append(currentpath['name'])
+        except:
+            currentpath.update({'passed':True})
+            pathpassedcompute(currentpath)
+        stepcount+=1
                 
         #currentnode = playerposcheck(playerlat,playerlong)
-        if currentpath['passed']==True:
-            pathlist.remove(previousnode['name'])
-            try:
-                nodepathlist.remove[previouspath['name']]
-            except:
-                None
-            stepcount-=1
         try:
-            pathpassedcompute(previouspath)
+            if currentnode['passed']==True:
+                try:
+                    pathlist.remove(previousnode['name'])
+                    nodepathlistpassed.remove(previouspath['name'])
+                except:
+                    pathlist.remove(previousnode['name'])
+                stepcount-=1
+                try:
+                    pathpassedcompute(previouspath)
+                    passedcompute(previousnode)
+                except:
+                    passedcompute(previousnode)
         except:
-            None
-        passedcompute(previousnode)
+            pathlist.remove(previousnode['name'])
+            passedcompute(previousnode)
+
+        for i in nodepathlist:
+            path = i['endnode']['distance'] + i['traffic']*20
+            i.update({'path_distance':path})
+            print(f"{i['name']}: {i['path_distance']}")    
         
 
         time.sleep(speed)
