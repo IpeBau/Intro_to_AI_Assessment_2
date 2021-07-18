@@ -33,172 +33,172 @@ nodelist = [nodeA, nodeB, nodeC, nodeD, nodeE, nodeF, nodeG, nodeH, nodeI, nodeJ
 nodepathlist = []
 
 nodeA.update({'openmove':[nodeB]})
-nodepathAB = {'name':'AB', 'traffic':0, 'path_distance':0, 'startnode':nodeA, 'endnode':nodeB, 'passed':False}
+nodepathAB = {'name':'Katipunan SB', 'traffic':0, 'path_distance':0, 'startnode':nodeA, 'endnode':nodeB, 'passed':False}
 nodepathlist.append(nodepathAB)
 
 nodeB.update({'openmove':[nodeA, nodeC]})
-nodepathBA = {'name':'BA', 'traffic':0, 'path_distance':0, 'startnode':nodeB, 'endnode':nodeA, 'passed':False}
-nodepathBC = {'name':'BC', 'traffic':0, 'path_distance':0, 'startnode':nodeB, 'endnode':nodeC, 'passed':False}
+nodepathBA = {'name':'Katipunan NB', 'traffic':0, 'path_distance':0, 'startnode':nodeB, 'endnode':nodeA, 'passed':False}
+nodepathBC = {'name':'Katipunan Flyover/Aurora SB', 'traffic':0, 'path_distance':0, 'startnode':nodeB, 'endnode':nodeC, 'passed':False}
 nodepathlist.append(nodepathBA)
 nodepathlist.append(nodepathBC)
 
 nodeC.update({'openmove':[nodeB, nodeD, nodeV]})
-nodepathCB = {'name':'CB', 'traffic':0, 'path_distance':0, 'startnode':nodeC, 'endnode':nodeB, 'passed':False}
-nodepathCD = {'name':'CD', 'traffic':0, 'path_distance':0, 'startnode':nodeC, 'endnode':nodeD, 'passed':False}
-nodepathCV = {'name':'CV', 'traffic':0, 'path_distance':0, 'startnode':nodeC, 'endnode':nodeV, 'passed':False}
+nodepathCB = {'name':'Katipunan Flyover/Aurora NB', 'traffic':0, 'path_distance':0, 'startnode':nodeC, 'endnode':nodeB, 'passed':False}
+nodepathCD = {'name':'Katipunan Flyover/Aurora to Katipunan Ext. SB', 'traffic':0, 'path_distance':0, 'startnode':nodeC, 'endnode':nodeD, 'passed':False}
+nodepathCV = {'name':'Katipunan Flyover/Aurora to Marikina Highway - Barangka SB', 'traffic':0, 'path_distance':0, 'startnode':nodeC, 'endnode':nodeV, 'passed':False}
 nodepathlist.append(nodepathCB)
 nodepathlist.append(nodepathCD)
 nodepathlist.append(nodepathCV)
 
 nodeD.update({'openmove':[nodeC, nodeE]})
-nodepathDC = {'name':'DC', 'traffic':0, 'path_distance':0, 'startnode':nodeD, 'endnode':nodeC, 'passed':False}
-nodepathDE = {'name':'DE', 'traffic':0, 'path_distance':0, 'startnode':nodeD, 'endnode':nodeE, 'passed':False}
+nodepathDC = {'name':'Katipunan Extension 1 to Katipunan Flyover/Aurora NB', 'traffic':0, 'path_distance':0, 'startnode':nodeD, 'endnode':nodeC, 'passed':False}
+nodepathDE = {'name':'Katipunan Extension 1 to Katipunan Extension 2 SB', 'traffic':0, 'path_distance':0, 'startnode':nodeD, 'endnode':nodeE, 'passed':False}
 nodepathlist.append(nodepathDC)
 nodepathlist.append(nodepathDE)
 
 nodeE.update({'openmove':[nodeD, nodeF, nodeP]})
-nodepathED = {'name':'ED', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeD, 'passed':False}
-nodepathEF = {'name':'EF', 'traffic':0.5, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeF, 'passed':False}
-nodepathEP = {'name':'EP', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeP, 'passed':False}
+nodepathED = {'name':'Katipunan Extension 2 to Katipunan Extension 1 NB', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeD, 'passed':False}
+nodepathEF = {'name':'Santolan SB', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeF, 'passed':False}
+nodepathEP = {'name':'Katipunan Tunnel to Libis', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeP, 'passed':False}
 nodepathlist.append(nodepathED)
 nodepathlist.append(nodepathEF)
 nodepathlist.append(nodepathEP)
 
 nodeF.update({'openmove':[nodeE, nodeS]})
-nodepathFE = {'name':'FE', 'traffic':0, 'path_distance':0, 'startnode':nodeF, 'endnode':nodeE, 'passed':False}
-nodepathFS = {'name':'FS', 'traffic':0, 'path_distance':0, 'startnode':nodeF, 'endnode':nodeS, 'passed':False}
+nodepathFE = {'name':'Santolan NB', 'traffic':0, 'path_distance':0, 'startnode':nodeF, 'endnode':nodeE, 'passed':False}
+nodepathFS = {'name':'EDSA: Santolan to Connecticut SB', 'traffic':0, 'path_distance':0, 'startnode':nodeF, 'endnode':nodeS, 'passed':False}
 nodepathlist.append(nodepathFE)
 nodepathlist.append(nodepathFS)
 
 nodeG.update({'openmove':[nodeH, nodeS, nodeB1]})
-nodepathGH = {'name':'GH', 'traffic':0, 'path_distance':0, 'startnode':nodeG, 'endnode':nodeH, 'passed':False}
-nodepathGS = {'name':'GS', 'traffic':0, 'path_distance':0, 'startnode':nodeG, 'endnode':nodeS, 'passed':False}
-nodepathGB1 = {'name':'GB1', 'traffic':0, 'path_distance':0, 'startnode':nodeG, 'endnode':nodeB1, 'passed':False}
+nodepathGH = {'name':'EDSA: Ortigas to Shaw SB', 'traffic':0, 'path_distance':0, 'startnode':nodeG, 'endnode':nodeH, 'passed':False}
+nodepathGS = {'name':'EDSA: Ortigas to Connecticut NB', 'traffic':0, 'path_distance':0, 'startnode':nodeG, 'endnode':nodeS, 'passed':False}
+nodepathGB1 = {'name':'EDSA: Ortigas Avenue to Ortigas cor. San Miguel Ave.', 'traffic':0, 'path_distance':0, 'startnode':nodeG, 'endnode':nodeB1, 'passed':False}
 nodepathlist.append(nodepathGH)
 nodepathlist.append(nodepathGS)
 nodepathlist.append(nodepathGB1)
 
 nodeH.update({'openmove':[nodeG, nodeA1]})
-nodepathHG = {'name':'HG', 'traffic':0, 'path_distance':0, 'startnode':nodeH, 'endnode':nodeG, 'passed':False}
-nodepathHA1 = {'name':'HA1', 'traffic':0, 'path_distance':0, 'startnode':nodeH, 'endnode':nodeA1, 'passed':False}
+nodepathHG = {'name':'EDSA: Shaw to Ortigas Ave. NB', 'traffic':0, 'path_distance':0, 'startnode':nodeH, 'endnode':nodeG, 'passed':False}
+nodepathHA1 = {'name':'EDSA: Shaw to Pioneer', 'traffic':0, 'path_distance':0, 'startnode':nodeH, 'endnode':nodeA1, 'passed':False}
 nodepathlist.append(nodepathHG)
 nodepathlist.append(nodepathHA1)
 
 nodeI.update({'openmove':[nodeT, nodeJ, nodeA1]})
-nodepathIT = {'name':'IT', 'traffic':0, 'path_distance':0, 'startnode':nodeI, 'endnode':nodeT, 'passed':False}
-nodepathIJ = {'name':'IJ', 'traffic':0, 'path_distance':0, 'startnode':nodeI, 'endnode':nodeJ, 'passed':False}
-nodepathIA1 = {'name':'IA1', 'traffic':0, 'path_distance':0, 'startnode':nodeI, 'endnode':nodeA1, 'passed':False}
+nodepathIT = {'name':'EDSA: Estrella+ to Narra Ext.', 'traffic':0, 'path_distance':0, 'startnode':nodeI, 'endnode':nodeT, 'passed':False}
+nodepathIJ = {'name':'EDSA: Estrella+ to Ayala Avenue', 'traffic':0, 'path_distance':0, 'startnode':nodeI, 'endnode':nodeJ, 'passed':False}
+nodepathIA1 = {'name':'EDSA: Estrella+ to Pioneer', 'traffic':0, 'path_distance':0, 'startnode':nodeI, 'endnode':nodeA1, 'passed':False}
 nodepathlist.append(nodepathIT)
 nodepathlist.append(nodepathIJ)
 nodepathlist.append(nodepathIA1)
 
 nodeJ.update({'openmove':[nodeI, nodeK]})
-nodepathJI = {'name':'JI', 'traffic':0, 'path_distance':0, 'startnode':nodeJ, 'endnode':nodeI, 'passed':False}
-nodepathJK = {'name':'JK', 'traffic':0, 'path_distance':0, 'startnode':nodeJ, 'endnode':nodeK, 'passed':False}
+nodepathJI = {'name':'EDSA: Ayala Avenue to Estrella+', 'traffic':0, 'path_distance':0, 'startnode':nodeJ, 'endnode':nodeI, 'passed':False}
+nodepathJK = {'name':'EDSA: Ayala Avenue to Ayala Ave. cor. Makati Ave.', 'traffic':0, 'path_distance':0, 'startnode':nodeJ, 'endnode':nodeK, 'passed':False}
 nodepathlist.append(nodepathJI)
 nodepathlist.append(nodepathJK)
 
 nodeK.update({'openmove':[nodeJ]})
-nodepathKJ = {'name':'KJ', 'traffic':0, 'path_distance':0, 'startnode':nodeK, 'endnode':nodeJ, 'passed':False}
+nodepathKJ = {'name':'EDSA: Ayala Ave. cor. Makati Ave. to Ayala Avenue', 'traffic':0, 'path_distance':0, 'startnode':nodeK, 'endnode':nodeJ, 'passed':False}
 nodepathlist.append(nodepathKJ)
 
 nodeL.update({'openmove':[nodeO, nodeR, nodeB1, nodeC1]})
-nodepathLO = {'name':'LO', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeO, 'passed':False}
-nodepathLR = {'name':'LR', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeR, 'passed':False}
-nodepathLB1 = {'name':'LB1', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeB1, 'passed':False}
-nodepathLC1 = {'name':'LC1', 'traffic':0.5, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeC1, 'passed':False}
+nodepathLO = {'name':'Ortigas Ave.: C5 to Amang Rodriguez', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeO, 'passed':False}
+nodepathLR = {'name':'C5: Ortigas to Eastwood', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeR, 'passed':False}
+nodepathLB1 = {'name':'Ortigas: C5 to San Miguel Ave.', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeB1, 'passed':False}
+nodepathLC1 = {'name':'C5: Ortigas to Lanuza', 'traffic':0, 'path_distance':0, 'startnode':nodeL, 'endnode':nodeC1, 'passed':False}
 nodepathlist.append(nodepathLO)
 nodepathlist.append(nodepathLR)
 nodepathlist.append(nodepathLB1)
 nodepathlist.append(nodepathLC1)
 
 nodeM.update({'openmove':[nodeU, nodeT]})
-nodepathMU = {'name':'MU', 'traffic':0, 'path_distance':0, 'startnode':nodeM, 'endnode':nodeU, 'passed':False}
-nodepathMT = {'name':'MT', 'traffic':0, 'path_distance':0, 'startnode':nodeM, 'endnode':nodeT, 'passed':False}
+nodepathMU = {'name':'C5: Kalayaan Avenue to Bagong Ilog', 'traffic':0, 'path_distance':0, 'startnode':nodeM, 'endnode':nodeU, 'passed':False}
+nodepathMT = {'name':'Kalayaan Avenue: C5 to Narra Extension', 'traffic':0, 'path_distance':0, 'startnode':nodeM, 'endnode':nodeT, 'passed':False}
 nodepathlist.append(nodepathMU)
 nodepathlist.append(nodepathMT)
 
 nodeN.update({'openmove':[nodeW, nodeZ]})
-nodepathNW = {'name':'NW', 'traffic':0, 'path_distance':0, 'startnode':nodeN, 'endnode':nodeW, 'passed':False}
-nodepathNZ = {'name':'NZ', 'traffic':0, 'path_distance':0, 'startnode':nodeN, 'endnode':nodeZ, 'passed':False}
+nodepathNW = {'name':'Amang Rodriguez to Marikina Infanta Highway Curve', 'traffic':0, 'path_distance':0, 'startnode':nodeN, 'endnode':nodeW, 'passed':False}
+nodepathNZ = {'name':'Amang Rodriguez: Marikina Infanta to Manggahan', 'traffic':0, 'path_distance':0, 'startnode':nodeN, 'endnode':nodeZ, 'passed':False}
 nodepathlist.append(nodepathNW)
 nodepathlist.append(nodepathNZ)
 
 nodeO.update({'openmove':[nodeZ, nodeL]})
-nodepathOZ = {'name':'OZ', 'traffic':0, 'path_distance':0, 'startnode':nodeO, 'endnode':nodeZ, 'passed':False}
-nodepathOL = {'name':'OL', 'traffic':0, 'path_distance':0, 'startnode':nodeO, 'endnode':nodeL, 'passed':False}
+nodepathOZ = {'name':'Amang Rodriguez: Ortigas to Manggahan', 'traffic':0, 'path_distance':0, 'startnode':nodeO, 'endnode':nodeZ, 'passed':False}
+nodepathOL = {'name':'Ortigas: Amang Rodriquez to C5', 'traffic':0, 'path_distance':0, 'startnode':nodeO, 'endnode':nodeL, 'passed':False}
 nodepathlist.append(nodepathOZ)
 nodepathlist.append(nodepathOL)
 
 nodeP.update({'openmove':[nodeE, nodeQ]})
-nodepathPE = {'name':'PE', 'traffic':0, 'path_distance':0, 'startnode':nodeP, 'endnode':nodeE, 'passed':False}
-nodepathPQ = {'name':'PQ', 'traffic':0, 'path_distance':0, 'startnode':nodeP, 'endnode':nodeQ, 'passed':False}
+nodepathPE = {'name':'Libis to Katipunan Tunnel', 'traffic':0, 'path_distance':0, 'startnode':nodeP, 'endnode':nodeE, 'passed':False}
+nodepathPQ = {'name':'Katipunan-Libis Tunnel to Mercury Ave', 'traffic':0, 'path_distance':0, 'startnode':nodeP, 'endnode':nodeQ, 'passed':False}
 nodepathlist.append(nodepathPE)
 nodepathlist.append(nodepathPQ)
 
 nodeQ.update({'openmove':[nodeP, nodeR]})
-nodepathQP = {'name':'QP', 'traffic':0, 'path_distance':0, 'startnode':nodeQ, 'endnode':nodeP, 'passed':False}
-nodepathQR = {'name':'QR', 'traffic':0, 'path_distance':0, 'startnode':nodeQ, 'endnode':nodeR, 'passed':False}
+nodepathQP = {'name':'Mercury Ave. to Katipunan-Libis Tunnel', 'traffic':0, 'path_distance':0, 'startnode':nodeQ, 'endnode':nodeP, 'passed':False}
+nodepathQR = {'name':'Mercury Ave. to Eastwood', 'traffic':0, 'path_distance':0, 'startnode':nodeQ, 'endnode':nodeR, 'passed':False}
 nodepathlist.append(nodepathQP)
 nodepathlist.append(nodepathQR)
 
 nodeR.update({'openmove':[nodeQ, nodeL]})
-nodepathRQ = {'name':'RQ', 'traffic':0, 'path_distance':0, 'startnode':nodeR, 'endnode':nodeQ, 'passed':False}
-nodepathRL = {'name':'RL', 'traffic':0, 'path_distance':0, 'startnode':nodeR, 'endnode':nodeL, 'passed':False}
+nodepathRQ = {'name':'Eastwood to Mercury Ave.', 'traffic':0, 'path_distance':0, 'startnode':nodeR, 'endnode':nodeQ, 'passed':False}
+nodepathRL = {'name':'C5: Eastwood to Ortigas Ave. ', 'traffic':0, 'path_distance':0, 'startnode':nodeR, 'endnode':nodeL, 'passed':False}
 nodepathlist.append(nodepathRQ)
 nodepathlist.append(nodepathRL)
 
 nodeS.update({'openmove':[nodeF, nodeG]})
-nodepathSF = {'name':'SF', 'traffic':0, 'path_distance':0, 'startnode':nodeS, 'endnode':nodeF, 'passed':False}
-nodepathSG = {'name':'SG', 'traffic':0, 'path_distance':0, 'startnode':nodeS, 'endnode':nodeG, 'passed':False}
+nodepathSF = {'name':'EDSA: Connecticut to Santolan', 'traffic':0, 'path_distance':0, 'startnode':nodeS, 'endnode':nodeF, 'passed':False}
+nodepathSG = {'name':'EDSA: Connecticut to Ortigas Ave.', 'traffic':0, 'path_distance':0, 'startnode':nodeS, 'endnode':nodeG, 'passed':False}
 nodepathlist.append(nodepathSF)
 nodepathlist.append(nodepathSG)
 
 nodeT.update({'openmove':[nodeI, nodeM]})
-nodepathTI = {'name':'TI', 'traffic':0, 'path_distance':0, 'startnode':nodeT, 'endnode':nodeI, 'passed':False}
-nodepathTM = {'name':'TM', 'traffic':0, 'path_distance':0, 'startnode':nodeT, 'endnode':nodeM, 'passed':False}
+nodepathTI = {'name':'Narra Ext. to Estrella+', 'traffic':0, 'path_distance':0, 'startnode':nodeT, 'endnode':nodeI, 'passed':False}
+nodepathTM = {'name':'Kalayaan Ave.: Narra Ext. to C5', 'traffic':0, 'path_distance':0, 'startnode':nodeT, 'endnode':nodeM, 'passed':False}
 nodepathlist.append(nodepathTI)
 nodepathlist.append(nodepathTM)
 
 nodeU.update({'openmove':[nodeM, nodeC1]})
-nodepathUM = {'name':'UM', 'traffic':0, 'path_distance':0, 'startnode':nodeU, 'endnode':nodeM, 'passed':False}
-nodepathUC1 = {'name':'UC1', 'traffic':0, 'path_distance':0, 'startnode':nodeU, 'endnode':nodeC1, 'passed':False}
+nodepathUM = {'name':'C5: Bagong Ilog to Kalayaan', 'traffic':0, 'path_distance':0, 'startnode':nodeU, 'endnode':nodeM, 'passed':False}
+nodepathUC1 = {'name':'C5: Bagong Ilog to Lanuza', 'traffic':0, 'path_distance':0, 'startnode':nodeU, 'endnode':nodeC1, 'passed':False}
 nodepathlist.append(nodepathUM)
 nodepathlist.append(nodepathUC1)
 
 nodeV.update({'openmove':[nodeC,nodeW]})
-nodepathVC = {'name':'VC', 'traffic':0, 'path_distance':0, 'startnode':nodeV, 'endnode':nodeC, 'passed':False}
-nodepathVW = {'name':'VW', 'traffic':0, 'path_distance':0, 'startnode':nodeV, 'endnode':nodeW, 'passed':False}
+nodepathVC = {'name':'Marikina Highway: Barangka to Katipunan Flyover/Aurora', 'traffic':0, 'path_distance':0, 'startnode':nodeV, 'endnode':nodeC, 'passed':False}
+nodepathVW = {'name':'Marikina Highway: Barangka to Amang Rodriguez', 'traffic':0, 'path_distance':0, 'startnode':nodeV, 'endnode':nodeW, 'passed':False}
 nodepathlist.append(nodepathVC)
 nodepathlist.append(nodepathVW)
 
 nodeW.update({'openmove':[nodeV, nodeN]})
-nodepathWV = {'name':'WV', 'traffic':0, 'path_distance':0, 'startnode':nodeW, 'endnode':nodeV, 'passed':False}
-nodepathWN = {'name':'WN', 'traffic':0, 'path_distance':0, 'startnode':nodeW, 'endnode':nodeN, 'passed':False}
+nodepathWV = {'name':'Marikina Highway: Amang Rodriguez to Barangka', 'traffic':0, 'path_distance':0, 'startnode':nodeW, 'endnode':nodeV, 'passed':False}
+nodepathWN = {'Marikina Highway: Amang Rodriguez':'WN', 'traffic':0, 'path_distance':0, 'startnode':nodeW, 'endnode':nodeN, 'passed':False}
 nodepathlist.append(nodepathWV)
 nodepathlist.append(nodepathWN)
 
 nodeZ.update({'openmove':[nodeN, nodeO]})
-nodepathZN = {'name':'ZN', 'traffic':0, 'path_distance':0, 'startnode':nodeZ, 'endnode':nodeN, 'passed':False}
-nodepathZO = {'name':'ZO', 'traffic':0, 'path_distance':0, 'startnode':nodeZ, 'endnode':nodeO, 'passed':False}
+nodepathZN = {'name':'Amang Rodriguez: Manggahan to Marikina Highway', 'traffic':0, 'path_distance':0, 'startnode':nodeZ, 'endnode':nodeN, 'passed':False}
+nodepathZO = {'name':'Amang Rodriguez: Manggahan to Ortigas', 'traffic':0, 'path_distance':0, 'startnode':nodeZ, 'endnode':nodeO, 'passed':False}
 nodepathlist.append(nodepathZN)
 nodepathlist.append(nodepathZO)
 
 nodeA1.update({'openmove':[nodeH, nodeI]})
-nodepathA1H = {'name':'A1H', 'traffic':0, 'path_distance':0, 'startnode':nodeA1, 'endnode':nodeH, 'passed':False}
-nodepathA1I = {'name':'A1I', 'traffic':0, 'path_distance':0, 'startnode':nodeA1, 'endnode':nodeI, 'passed':False}
+nodepathA1H = {'name':'EDSA: Pioneer to Shaw', 'traffic':0, 'path_distance':0, 'startnode':nodeA1, 'endnode':nodeH, 'passed':False}
+nodepathA1I = {'name':'EDSA: Pioneer to Estrella+', 'traffic':0, 'path_distance':0, 'startnode':nodeA1, 'endnode':nodeI, 'passed':False}
 nodepathlist.append(nodepathA1H)
 nodepathlist.append(nodepathA1I)
 
 nodeB1.update({'openmove':[nodeG, nodeL]})
-nodepathB1G = {'name':'B1G', 'traffic':0, 'path_distance':0, 'startnode':nodeB1, 'endnode':nodeG, 'passed':False}
-nodepathB1L = {'name':'B1L', 'traffic':0, 'path_distance':0, 'startnode':nodeB1, 'endnode':nodeL, 'passed':False}
+nodepathB1G = {'name':'EDSA: Ortigas cor. San Miguel Ave. to Ortigas Avenue', 'traffic':0, 'path_distance':0, 'startnode':nodeB1, 'endnode':nodeG, 'passed':False}
+nodepathB1L = {'name':'Ortigas: San Miguel Ave. to C5', 'traffic':0, 'path_distance':0, 'startnode':nodeB1, 'endnode':nodeL, 'passed':False}
 nodepathlist.append(nodepathB1G)
 nodepathlist.append(nodepathB1L)
 
 nodeC1.update({'openmove':[nodeL, nodeU]})
-nodepathC1L = {'name':'C1L', 'traffic':0, 'path_distance':0, 'startnode':nodeC1, 'endnode':nodeL, 'passed':False}
-nodepathC1U = {'name':'C1U', 'traffic':0, 'path_distance':0, 'startnode':nodeC1, 'endnode':nodeU, 'passed':False}
+nodepathC1L = {'name':'C5: Lanuza to Ortigas Ave.', 'traffic':0, 'path_distance':0, 'startnode':nodeC1, 'endnode':nodeL, 'passed':False}
+nodepathC1U = {'name':'C5: Lanuza to Bagong Ilog', 'traffic':0, 'path_distance':0, 'startnode':nodeC1, 'endnode':nodeU, 'passed':False}
 nodepathlist.append(nodepathC1L)
 nodepathlist.append(nodepathC1U)
 
