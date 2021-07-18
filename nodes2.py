@@ -174,7 +174,7 @@ nodepathlist.append(nodepathVW)
 
 nodeW.update({'openmove':[nodeV, nodeN]})
 nodepathWV = {'name':'Marikina Highway: Amang Rodriguez to Barangka', 'traffic':0, 'path_distance':0, 'startnode':nodeW, 'endnode':nodeV, 'passed':False}
-nodepathWN = {'Marikina Highway: Amang Rodriguez':'WN', 'traffic':0, 'path_distance':0, 'startnode':nodeW, 'endnode':nodeN, 'passed':False}
+nodepathWN = {'name':'Marikina Highway: Amang Rodriguez', 'traffic':0, 'path_distance':0, 'startnode':nodeW, 'endnode':nodeN, 'passed':False}
 nodepathlist.append(nodepathWV)
 nodepathlist.append(nodepathWN)
 
