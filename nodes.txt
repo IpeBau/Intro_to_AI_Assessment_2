@@ -1,15 +1,60 @@
-A
-B
-C
-D
-E
-F
-G
-H
-I
-J
-K
-L
-M
-N
-O
+E=[
+{A,B: 18.2234046303777, pathname: Katipunan SB},
+{B,A: 18.653033030308052, pathname: Katipunan NB},
+{B,C: 17.7937762304474, pathname: Katipunan Flyover/Aurora SB},
+{C,B: 18.2234046303777, pathname: Katipunan Flyover/Aurora NB},
+{C,D: 15.4666223974915, pathname: Katipunan Flyover/Aurora to Katipunan Ext. SB},
+{C,V: 18.241305813708152, pathname: Katipunan Flyover/Aurora to Marikina Highway - Barangka SB: 18.241305813708152},
+{D,C: 17.7937762304474, pathname: Katipunan Extension 1 to Katipunan Flyover/Aurora NB},
+{D,E: 14.857982164256901, pathname: Katipunan Extension 1 to Katipunan Extension 2 SB},
+{E,D: 15.4666223974915, pathname: Katipunan Extension 2 to Katipunan Extension 1 NB},
+{E,F: 12.15490348136195, pathname: Santolan SB},
+{E,P: 15.4666223974915, pathname: Katipunan Tunnel to Libis},
+{F,E: 14.857982164256901, pathname: Santolan NB},
+{F,S: 11.456757331475199, pathname: EDSA: Santolan to Connecticut SB},
+{G,H: 7.733311198745751, pathname: EDSA: Ortigas to Shaw SB},
+{G,S: 11.456757331475199, pathname: EDSA: Ortigas to Connecticut NB},
+{G,B1: 10.2573780483364, pathname: EDSA: Ortigas Avenue to Ortigas cor. San Miguel Ave.},
+{H,G: 10.18577331501465, pathname: EDSA: Shaw to Ortigas Ave. NB},
+{H,A1: 5.298750265807301, pathname: EDSA: Shaw to Pioneer},
+{I,T: 5.0123313325204, pathname: EDSA: Estrella+ to Narra Ext.},
+{I,J: 1.28888519979095, pathname: EDSA: Estrella+ to Ayala Avenue},
+{I,A1: 5.298750265807301, pathname: EDSA: Estrella+ to Pioneer},
+{J,I: 2.273450282964651, pathname: EDSA: Ayala Avenue to Estrella+},
+{J,K: 0.0, pathname: EDSA: Ayala Avenue to Ayala Ave. cor. Makati Ave.},
+{K,J: 1.28888519979095, pathname: EDSA: Ayala Ave. cor. Makati Ave. to Ayala Avenue},
+{L,O: 13.5690969644659, pathname: Ortigas Ave.: C5 to Amang Rodriguez},
+{L,R: 14.822179797596, pathname: C5: Ortigas to Eastwood},
+{L,B1, pathname: Ortigas: C5 to San Miguel Ave.: 10.2573780483364},
+{L,C1, pathname: C5: Ortigas to Lanuza: 10.0246626650408},
+{M,U: 7.5901017321023, pathname: C5: Kalayaan Avenue to Bagong Ilog},
+{M,T: 5.0123313325204, pathname: Kalayaan Avenue: C5 to Narra Extension},
+{N,W: 18.11599753039515, pathname: Amang Rodriguez to Marikina Infanta Highway Curve},
+{N,Z: 16.02155908073485, pathname: Amang Rodriguez: Marikina Infanta to Manggahan},
+{O,Z: 16.02155908073485, pathname: Amang Rodriguez: Ortigas to Manggahan},
+{O,L: 12.5845318812923, pathname: Ortigas: Amang Rodriquez to C5},
+{P,E: 14.857982164256901, pathname: Libis to Katipunan Tunnel},
+{P,Q: 15.0369939975612, pathname: Katipunan-Libis Tunnel to Mercury Ave},
+{Q,P: 15.4666223974915, pathname: Mercury Ave. to Katipunan-Libis Tunnel},
+{Q,R: 14.822179797596, pathname: Mercury Ave. to Eastwood},
+{R,Q: 15.0369939975612, pathname: Eastwood to Mercury Ave.},
+{R,L: 12.5845318812923, pathname: C5: Eastwood to Ortigas Ave.},
+{S,F: 12.15490348136195, pathname: EDSA: Connecticut to Santolan},
+{S,G: 10.18577331501465, pathname: EDSA: Connecticut to Ortigas Ave.},
+{T,I: 2.273450282964651, pathname: Narra Ext. to Estrella+},
+{T,M: 5.56726801576375, pathname: Kalayaan Ave.: Narra Ext. to C5},
+{U,M: 5.56726801576375, pathname: C5: Bagong Ilog to Kalayaan},
+{U,C1: 10.0246626650408, pathname: C5: Bagong Ilog to Lanuza},
+{V,C: 17.7937762304474, pathname: Marikina Highway: Barangka to Katipunan Flyover/Aurora},
+{V,W: 18.11599753039515, pathname: Marikina Highway: Barangka to Amang Rodriguez},
+{W,V: 18.241305813708152, pathname: Marikina Highway: Amang Rodriguez to Barangka},
+{W,N: 18.47402119700375, pathname: Marikina Highway: Amang Rodriguez},
+{Z,N: 18.47402119700375, pathname: Amang Rodriguez: Manggahan to Marikina Highway},
+{Z,O: 13.5690969644659, pathname: Amang Rodriguez: Manggahan to Ortigas},
+{A1,H: 7.733311198745751, pathname: EDSA: Pioneer to Shaw},
+{A1,I: 2.273450282964651, pathname: EDSA: Pioneer to Estrella+},
+{B1,G: 10.18577331501465, pathname: EDSA: Ortigas cor. San Miguel Ave. to Ortigas Avenue},
+{B1,L: 12.5845318812923, pathname: Ortigas: San Miguel Ave. to C5},
+{C1,L: 12.5845318812923, pathname: C5: Lanuza to Ortigas Ave.},
+{C1,U: 7.5901017321023, pathname: C5: Lanuza to Bagong Ilog}
+]
