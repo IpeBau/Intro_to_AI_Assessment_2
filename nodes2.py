@@ -334,7 +334,7 @@ for i in nodelist:
 for i in nodepathlist:
     path = i['endnode']['distance'] + i['traffic']*20
     i.update({'path_distance':path})
-    #print(f"{i['name']}: {i['path_distance']}")
+    print(f"{i['name']}: {i['path_distance']}")
 
 #def playerposcheck(playerlat, playerlong):
 #    for i in nodepathlist:
@@ -491,7 +491,7 @@ while True:
         for i in nodepathlist:
             path = i['endnode']['distance'] + i['traffic']*20
             i.update({'path_distance':path})
-            print(f"{i['name']}: {i['path_distance']}")    
+            #print(f"{i['name']}: {i['path_distance']}")    
         
 
         time.sleep(speed)
