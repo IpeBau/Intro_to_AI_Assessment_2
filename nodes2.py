@@ -414,6 +414,7 @@ def pathpassedcompute(x):
 
 nodepathlistpassed = []
 pathlist = []
+totaltravelled = 0
 stepcount = 0
 while True:
     currentnode = playerposcheck(playerlat,playerlong,'node')
@@ -465,6 +466,7 @@ while True:
             currentpath.update({'passed':True})
             pathpassedcompute(currentpath)
             nodepathlistpassed.append(currentpath['name'])
+            totaltravelled += currentpath['path_distance']
         except:
             currentpath.update({'passed':True})
             pathpassedcompute(currentpath)
@@ -479,6 +481,7 @@ while True:
                 except:
                     pathlist.remove(previousnode['name'])
                 stepcount-=1
+                totaltravelled -= previouspath['path_distance']
                 try:
                     pathpassedcompute(previouspath)
                     passedcompute(previousnode)
@@ -498,8 +501,9 @@ while True:
 
     elif playerlat == exitlat and playerlong == exitlong:
         print("\nPizza delivered!\nEnjoy!\n")
-        print(f'Optimum path nodes:{pathlist}')
-        print(f'Optimum path:{nodepathlistpassed}')
+        print(f'Optimum path nodes: {pathlist}')
+        print(f'Optimum path: {nodepathlistpassed}')
+        print(f'Total Travelled: {totaltravelled}')
         print(f'Number of steps: {stepcount-1}')
         break
 
