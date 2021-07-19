@@ -470,6 +470,7 @@ while True:
         except:
             currentpath.update({'passed':True})
             pathpassedcompute(currentpath)
+            totaltravelled += currentpath['path_distance']
         stepcount+=1
                 
         #currentnode = playerposcheck(playerlat,playerlong)
