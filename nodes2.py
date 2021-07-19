@@ -58,7 +58,7 @@ nodepathlist.append(nodepathDE)
 
 nodeE.update({'openmove':[nodeD, nodeF, nodeP]})
 nodepathED = {'name':'Katipunan Extension 2 to Katipunan Extension 1 NB', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeD, 'passed':False}
-nodepathEF = {'name':'Santolan SB', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeF, 'passed':False}
+nodepathEF = {'name':'Santolan SB', 'traffic':0.5, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeF, 'passed':False}
 nodepathEP = {'name':'Katipunan Tunnel to Libis', 'traffic':0, 'path_distance':0, 'startnode':nodeE, 'endnode':nodeP, 'passed':False}
 nodepathlist.append(nodepathED)
 nodepathlist.append(nodepathEF)
